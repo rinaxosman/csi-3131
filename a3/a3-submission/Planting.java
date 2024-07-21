@@ -26,6 +26,7 @@ public class Planting {
     }
 }
 
+// student class
 class Student extends Thread {
     TA ta;
 
@@ -58,6 +59,7 @@ class Student extends Thread {
     }
 }
 
+// TA class
 class TA extends Thread {
 
     // Some variables to count number of holes dug and filled - the TA keeps track of things
@@ -113,8 +115,8 @@ class TA extends Thread {
     }
 }
 
+// professor class
 class Professor extends Thread {
-
     TA ta;
 
     public Professor(TA taThread) {
@@ -126,7 +128,7 @@ class Professor extends Thread {
             try {
                 ta.professorReady.acquire();
                 sleep((int) (50 * Math.random()));
-                ta.incrHolePlanted();
+                ta.incrHolePlanted(); // the seed is planted - increment the number	
                 System.out.println("Professor: All be advised that I have completed planting hole " + ta.getHolePlanted());
                 ta.taReady.release();
 
@@ -137,16 +139,5 @@ class Professor extends Thread {
         System.out.println("Professor: We have worked enough for today");
     }
 
-    // public void run()
-	// {
-	// 	while(ta.getHolePlanted() <= 20)
-	// 	{
-		     
-	//              try {sleep((int) (50*Math.random()));} catch (Exception e) { break;} // Time to plant
-    //                  ta.incrHolePlanted();  // the seed is planted - increment the number	
-	// 	     System.out.println("Professor: All be advised that I have completed planting hole "+
-	// 			        ta.getHolePlanted());
-	// 	}
-	// 	System.out.println("Professor: We have worked enough for today");
-	// }
+    
 }
