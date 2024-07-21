@@ -12,7 +12,7 @@ int turn;
 pthread_mutex_t lock;
 
 void *thread0(void *arg){
-    for (int i = 0; i < a; i++)
+    for (int i = 0; i < a; i++) 
     {
         while (turn != 0);
         pthread_mutex_lock(&lock);
