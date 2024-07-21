@@ -139,5 +139,18 @@ class Professor extends Thread {
         System.out.println("Professor: We have worked enough for today");
     }
 
+    // public void run()
+	// {
+	// 	while(ta.getHolePlanted() <= 20)
+	// 	{
+		     
+	//              try {sleep((int) (50*Math.random()));} catch (Exception e) { break;} // Time to plant
+    //                  ta.incrHolePlanted();  // the seed is planted - increment the number	
+	// 	     System.out.println("Professor: All be advised that I have completed planting hole "+
+	// 			        ta.getHolePlanted());
+	// 	}
+	// 	System.out.println("Professor: We have worked enough for today");
+	// }
+
     
 }
